@@ -20,7 +20,7 @@ public class Base extends AppCompatActivity {
 
     public FoodApp app;
     public Bundle activityInfo; // Used for persistence (of sorts)
-    public FoodFragment foodFragment; // How we'll 'share' our List of Coffees between Activities
+    public FoodFragment foodFragment;
 
     FirebaseAuth firebaseAuth;
 

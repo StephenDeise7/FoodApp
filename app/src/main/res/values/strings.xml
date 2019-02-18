@@ -9,6 +9,7 @@
 
     <string name="searchFoodLbl">Search Food\'s</string>
     <string name="favouritesFoodLbl">Favourite Food\'s</string>
+    <string name="restuarantmaplbl">Map of Restuarants\'s</string>
     <string name="addAFoodLbl">Food Check In</string>
     <string name="addFoodBtnLbl">Add Food</string>
     <string name="saveFoodBtn">Save Food</string>

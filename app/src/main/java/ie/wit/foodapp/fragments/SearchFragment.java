@@ -43,7 +43,7 @@ public class SearchFragment extends FoodFragment
         spinner.setOnItemSelectedListener(this);
 
         searchView = activity.findViewById(R.id.searchView);
-        searchView.setQueryHint("Search your Coffees Here");
+        searchView.setQueryHint("Search your Foods Here");
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
@@ -98,8 +98,8 @@ public class SearchFragment extends FoodFragment
     public void onNothingSelected(AdapterView<?> parent) { }
 
     @Override
-    public void deleteCoffees(ActionMode actionMode) {
-        super.deleteCoffees(actionMode);
+    public void deleteFood(ActionMode actionMode) {
+        super.deleteFood(actionMode);
         checkSelected(selected);
     }
 

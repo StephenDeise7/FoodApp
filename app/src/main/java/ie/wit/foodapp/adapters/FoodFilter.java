@@ -77,6 +77,6 @@ public class FoodFilter extends Filter {
 			adapter.notifyDataSetInvalidated();
 			adapter.foodList = originalFoodList;
 		}
-		Log.v("coffeemate", "publishResults : " + adapter.foodList);
+		Log.v("food app", "publishResults : " + adapter.foodList);
 	}
 }

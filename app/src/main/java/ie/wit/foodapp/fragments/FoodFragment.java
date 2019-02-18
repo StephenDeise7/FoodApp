@@ -46,7 +46,7 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
         super.onListItemClick(l, v, position, id);
 
         Bundle activityInfo = new Bundle(); // Creates a new Bundle object
-        activityInfo.putString("coffeeId", (String) v.getTag());
+        activityInfo.putString("FoodId", (String) v.getTag());
         Intent goEdit = new Intent(getActivity(), Edit.class); // Creates a new Intent
         /* Add the bundle to the intent here */
         goEdit.putExtras(activityInfo);
@@ -78,7 +78,7 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
             listAdapter.notifyDataSetChanged(); // Update the adapter
         }
         setListAdapter (listAdapter);
-        setRandomCoffee();
+        setRandomFood();
         checkEmptyList();
     }
 
@@ -121,7 +121,7 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
             {
                 activity.app.foodList.remove(food); // remove from our list
                 listAdapter.foodList.remove(food); // update adapters data
-                setRandomCoffee();
+                setRandomFood();
                 listAdapter.notifyDataSetChanged(); // refresh adapter
                 checkEmptyList();
             }
@@ -155,15 +155,15 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
     {
         switch (menuItem.getItemId())
         {
-            case R.id.menu_item_delete_coffee:
-                deleteCoffees(actionMode);
+            case R.id.menu_item_delete_food:
+                deleteFood(actionMode);
                 return true;
             default:
                 return false;
         }
     }
 
-    public void deleteCoffees(ActionMode actionMode)
+    public void deleteFood(ActionMode actionMode)
     {
         for (int i = listAdapter.getCount() -1 ; i >= 0; i--)
         {
@@ -174,14 +174,14 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
                    listAdapter.foodList.remove(listAdapter.getItem(i));
             }
         }
-        setRandomCoffee();
+        setRandomFood();
         listAdapter.notifyDataSetChanged(); // refresh adapter
         checkEmptyList();
 
         actionMode.finish();
     }
 
-    public void setRandomCoffee() {
+    public void setRandomFood() {
 
         ArrayList<Food> foodList = new ArrayList<>();
 
@@ -194,16 +194,16 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
                 Food randomFood = foodList.get(new Random()
                             .nextInt(foodList.size()));
 
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeeName)).setText(randomFood.foodName);
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeeShop)).setText(randomFood.shop);
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeePrice)).setText("€ " + randomFood.price);
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeeRating)).setText(randomFood.rating + " *");
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodName)).setText(randomFood.foodName);
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodShop)).setText(randomFood.shop);
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodPrice)).setText("€ " + randomFood.price);
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodRating)).setText(randomFood.rating + " *");
             }
             else {
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeeName)).setText("N/A");
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeeShop)).setText("N/A");
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeePrice)).setText("N/A");
-                ((TextView) getActivity().findViewById(R.id.favouriteCoffeeRating)).setText("N/A");
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodName)).setText("N/A");
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodShop)).setText("N/A");
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodPrice)).setText("N/A");
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodRating)).setText("N/A");
             }
     }
 

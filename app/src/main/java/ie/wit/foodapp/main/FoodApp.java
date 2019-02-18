@@ -16,6 +16,6 @@ public class FoodApp extends Application
     public void onCreate()
     {
         super.onCreate();
-        Log.v("coffeemate", "CoffeeMate App Started");
+        Log.v("foodapp", "food App Started");
     }
 }

@@ -29,7 +29,7 @@ public class Add extends Base {
         ratingBar =  findViewById(R.id.addRatingBar);
     }
 
-    public void addCoffee(View v) {
+    public void addFood(View v) {
 
         foodName = name.getText().toString();
         restuarant = shop.getText().toString();

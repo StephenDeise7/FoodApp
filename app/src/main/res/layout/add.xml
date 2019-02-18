@@ -150,7 +150,7 @@
         android:layout_marginTop="68dp"
         android:background="@color/colorFontOffWhite"
         android:drawableTop="@drawable/blue_add_48"
-        android:onClick="addCoffee"
+        android:onClick="addFood"
         android:text="@string/addAFoodLbl"
         app:layout_constraintBottom_toTopOf="@+id/editfooter"
         app:layout_constraintEnd_toEndOf="parent"
