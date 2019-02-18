@@ -21,20 +21,8 @@ public class Home extends Base {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Information", Snackbar.LENGTH_LONG)
-                        .setAction("More Info...", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
 
-                            }
-                        }).show();
-            }
-        });
-        if(app.foodList.isEmpty()) setupCoffees();
+        if(app.foodList.isEmpty()) setupFoods();
     }
 
     public void add(View v) {
@@ -58,7 +46,7 @@ public class Home extends Base {
                 .commit(); // add it to the current activity
     }
 
-    public void setupCoffees(){
+    public void setupFoods(){
         app.foodList.add(new Food("Sausage Special", " Brennans",2.5,6.00,false));
     }
 }
