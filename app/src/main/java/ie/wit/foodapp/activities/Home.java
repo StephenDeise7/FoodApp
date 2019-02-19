@@ -2,17 +2,12 @@ package ie.wit.foodapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 
 
-import ie.wit.foodapp.fragments.FoodFragment;
-import ie.wit.foodapp.models.Food;
 import ie.wit.foodapp.R;
+import ie.wit.foodapp.fragments.FoodFragment;
 
 public class Home extends Base {
 
@@ -51,7 +46,7 @@ public class Home extends Base {
     }
 
     public void setupFoods(){
-        app.foodList.add(new Food("Sausage Special", " Brennans",2.5,6.00,false));
+
     }
 }
 

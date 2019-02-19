@@ -7,12 +7,13 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
-import ie.wit.foodapp.models.Food;
 import ie.wit.foodapp.R;
+import ie.wit.foodapp.models.Food;
+
 
 public class Add extends Base {
 
-    private String foodName, restuarant;
+    private String 		foodName, foodShop;
     private double 		foodPrice, ratingValue;
     private EditText name, shop, price;
     private RatingBar ratingBar;
@@ -32,7 +33,7 @@ public class Add extends Base {
     public void addFood(View v) {
 
         foodName = name.getText().toString();
-        restuarant = shop.getText().toString();
+        foodShop = shop.getText().toString();
         try {
             foodPrice = Double.parseDouble(price.getText().toString());
         } catch (NumberFormatException e) {
@@ -40,9 +41,9 @@ public class Add extends Base {
         }
         ratingValue = ratingBar.getRating();
 
-        if ((foodName.length() > 0) && (restuarant.length() > 0)
+        if ((foodName.length() > 0) && (foodShop.length() > 0)
                 && (price.length() > 0)) {
-            Food c = new Food(foodName, restuarant, ratingValue,
+            Food c = new Food(foodName, foodShop, ratingValue,
                     foodPrice, false);
 
             app.foodList.add(c);

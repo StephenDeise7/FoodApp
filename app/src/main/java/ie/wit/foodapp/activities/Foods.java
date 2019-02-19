@@ -1,36 +1,37 @@
 package ie.wit.foodapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import ie.wit.foodapp.R;
 import ie.wit.foodapp.fragments.FoodFragment;
 
+public class Foods extends Base{
 
-public class Favourites extends Base {
-
-    private TextView emptyList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.favourites);
+        setContentView(R.layout.foods);
 
-        emptyList = findViewById(R.id.emptyList);
+        if(app.foodList.isEmpty()) setupFoods();
     }
+
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        if(app.foodList.isEmpty())
-            emptyList.setText(getString(R.string.emptyMessageLbl));
-        else
-            emptyList.setText("");
 
         foodFragment = FoodFragment.newInstance(); //get a new Fragment instance
         getFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, foodFragment)
                 .commit(); // add it to the current activity
     }
+
+    public void setupFoods(){
+
+    }
 }
+

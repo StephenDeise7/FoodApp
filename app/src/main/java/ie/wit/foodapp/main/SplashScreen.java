@@ -21,7 +21,7 @@ public class SplashScreen extends Activity {
 
             new Handler().postDelayed(new Runnable() {
                 public void run() {
-                    startActivity(new Intent(SplashScreen.this, Main_Menu.class));
+                    startActivity(new Intent(SplashScreen.this, HomeMenu.class));
                     finish();
                 }
             }, secondsDelayed * 1000);

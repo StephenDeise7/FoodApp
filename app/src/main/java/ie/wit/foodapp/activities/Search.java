@@ -2,9 +2,9 @@ package ie.wit.foodapp.activities;
 
 import android.os.Bundle;
 
-
-import ie.wit.foodapp.fragments.SearchFragment;
 import ie.wit.foodapp.R;
+import ie.wit.foodapp.fragments.SearchFragment;
+
 
 public class Search extends Base  {
 

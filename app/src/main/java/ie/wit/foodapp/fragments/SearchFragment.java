@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.SearchView;
 import android.widget.Spinner;
+
 import ie.wit.foodapp.R;
 
 
@@ -98,8 +99,8 @@ public class SearchFragment extends FoodFragment
     public void onNothingSelected(AdapterView<?> parent) { }
 
     @Override
-    public void deleteFood(ActionMode actionMode) {
-        super.deleteFood(actionMode);
+    public void deleteFoods(ActionMode actionMode) {
+        super.deleteFoods(actionMode);
         checkSelected(selected);
     }
 

@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-
 import ie.wit.foodapp.R;
 import ie.wit.foodapp.models.Food;
 
@@ -23,7 +22,7 @@ public class FoodItem {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.foodrow, parent, false);
-        view.setTag(food.foodId);
+        view.setTag(food.FoodId);
 
         updateControls(food);
 
@@ -35,7 +34,7 @@ public class FoodItem {
     private void updateControls(Food food) {
         ((TextView) view.findViewById(R.id.rowFoodName)).setText(food.foodName);
 
-        ((TextView) view.findViewById(R.id.rowFoodShop)).setText(food.shop);
+        ((TextView) view.findViewById(R.id.rowRestuarant)).setText(food.shop);
         ((TextView) view.findViewById(R.id.rowRating)).setText(food.rating + " *");
         ((TextView) view.findViewById(R.id.rowPrice)).setText("€" +
                 new DecimalFormat("0.00").format(food.price));

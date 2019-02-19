@@ -1,8 +1,8 @@
 package ie.wit.foodapp.activities;
 
 import android.os.Bundle;
-import ie.wit.foodapp.R;
 
+import ie.wit.foodapp.R;
 
 
 public class Help extends Base {

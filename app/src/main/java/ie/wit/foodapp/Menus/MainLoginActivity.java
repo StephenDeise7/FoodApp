@@ -97,7 +97,7 @@ public class MainLoginActivity extends AppCompatActivity implements View.OnClick
                         //checking if success
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), Home.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else{
                             //display some message here
                             Toast.makeText(MainLoginActivity.this,"Registration Error",Toast.LENGTH_LONG).show();

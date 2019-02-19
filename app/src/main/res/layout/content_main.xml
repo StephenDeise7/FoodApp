@@ -7,9 +7,39 @@
     android:orientation="horizontal"
     android:layout_gravity="bottom"
     style="?android:attr/buttonBarButtonStyle"
-    tools:context=".Menus.Main_Menu"
+    tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
 
+    <Button
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Home"
+        android:onClick="go2Home"/>
 
+    <Button
+        android:id="@+id/gym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Gym"
+        android:onClick="go2Search"/>
+
+    <Button
+        android:id="@+id/favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Favourites"
+        android:onClick="go2Favourites"/>
+
+    <Button
+        android:id="@+id/donate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Donate"
+        android:onClick="go2Donate"/>
 </LinearLayout>

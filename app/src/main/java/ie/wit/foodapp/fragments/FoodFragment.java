@@ -156,14 +156,14 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
         switch (menuItem.getItemId())
         {
             case R.id.menu_item_delete_food:
-                deleteFood(actionMode);
+                deleteFoods(actionMode);
                 return true;
             default:
                 return false;
         }
     }
 
-    public void deleteFood(ActionMode actionMode)
+    public void deleteFoods(ActionMode actionMode)
     {
         for (int i = listAdapter.getCount() -1 ; i >= 0; i--)
         {
@@ -195,13 +195,13 @@ public class FoodFragment extends ListFragment implements View.OnClickListener,
                             .nextInt(foodList.size()));
 
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodName)).setText(randomFood.foodName);
-                ((TextView) getActivity().findViewById(R.id.favouriteFoodShop)).setText(randomFood.shop);
+                ((TextView) getActivity().findViewById(R.id.favouriteRestuarant)).setText(randomFood.shop);
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodPrice)).setText("€ " + randomFood.price);
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodRating)).setText(randomFood.rating + " *");
             }
             else {
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodName)).setText("N/A");
-                ((TextView) getActivity().findViewById(R.id.favouriteFoodShop)).setText("N/A");
+                ((TextView) getActivity().findViewById(R.id.favouriteRestuarant)).setText("N/A");
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodPrice)).setText("N/A");
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodRating)).setText("N/A");
             }

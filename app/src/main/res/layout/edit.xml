@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="25dp"
         android:layout_marginTop="104dp"
-        android:background="@android:color/holo_orange_light"
+        android:background="@color/colorPrimary"
         android:paddingBottom="2dp"
         android:text="@string/FoodDetailsLbl"
         android:textAlignment="center"
@@ -26,7 +26,7 @@
         android:id="@+id/editfooter"
         android:layout_width="0dp"
         android:layout_height="36dp"
-        android:background="@android:color/holo_orange_light"
+        android:background="@color/colorPrimary"
         android:paddingTop="5dp"
         android:textAlignment="center"
         android:textColor="@color/colorFontWhite"
@@ -151,7 +151,7 @@
         app:layout_constraintVertical_bias="0.116" />
 
     <Button
-        android:id="@+id/editFoodBtn"
+        android:id="@+id/editCoffeeBtn"
         android:layout_width="79dp"
         android:layout_height="84dp"
         android:layout_marginBottom="8dp"

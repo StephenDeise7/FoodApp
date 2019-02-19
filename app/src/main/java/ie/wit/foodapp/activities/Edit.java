@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import ie.wit.foodapp.R;
 
+import ie.wit.foodapp.R;
 import ie.wit.foodapp.models.Food;
 
 
@@ -26,14 +26,14 @@ public class Edit extends Base {
         setContentView(R.layout.edit);
         context = this;
         activityInfo = getIntent().getExtras();
-        aFood = getFoodObject(activityInfo.getString("foodId"));
+        aFood = getCoffeeObject(activityInfo.getString("FoodId"));
 
         ((TextView)findViewById(R.id.editTitleTV)).setText(aFood.foodName);
 
         ((EditText)findViewById(R.id.editNameET)).setText(aFood.foodName);
         ((EditText)findViewById(R.id.editShopET)).setText(aFood.shop);
-        ((EditText)findViewById(R.id.editPriceET)).setText(""+ aFood.price);
-        ((RatingBar) findViewById(R.id.editRatingBar)).setRating((float) aFood.rating);
+        ((EditText)findViewById(R.id.editPriceET)).setText(""+aFood.price);
+        ((RatingBar) findViewById(R.id.editRatingBar)).setRating((float)aFood.rating);
 
         editFavourite = findViewById(R.id.editFavourite);
 
@@ -46,20 +46,20 @@ public class Edit extends Base {
         }
     }
 
-    private Food getFoodObject(String id) {
+    private Food getCoffeeObject(String id) {
 
         for (Food c : app.foodList)
-            if (c.foodId.equalsIgnoreCase(id))
+            if (c.FoodId.equalsIgnoreCase(id))
                 return c;
 
         return null;
     }
 
-//    private int getCoffeeIndex(Food obj) {
+//    private int getCoffeeIndex(Coffee obj) {
 //
-//        for (Food c : foodList)
+//        for (Coffee c : coffeeList)
 //            if (c.coffeeId == obj.coffeeId)
-//                return foodList.indexOf(c);
+//                return coffeeList.indexOf(c);
 //
 //        return -1;
 //    }
@@ -67,7 +67,7 @@ public class Edit extends Base {
     public void saveFood(View v) {
 
         String foodName = ((EditText) findViewById(R.id.editNameET)).getText().toString();
-        String restuarant = ((EditText) findViewById(R.id.editShopET)).getText().toString();
+        String foodShop = ((EditText) findViewById(R.id.editShopET)).getText().toString();
         String foodPriceStr = ((EditText) findViewById(R.id.editPriceET)).getText().toString();
         double ratingValue =((RatingBar) findViewById(R.id.editRatingBar)).getRating();
         double foodPrice;
@@ -78,13 +78,13 @@ public class Edit extends Base {
             foodPrice = 0.0;
         }
 
-        if ((foodName.length() > 0) && (restuarant.length() > 0) && (foodPriceStr.length() > 0)) {
+        if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodPriceStr.length() > 0)) {
             aFood.foodName = foodName;
-            aFood.shop = restuarant;
+            aFood.shop = foodShop;
             aFood.price = foodPrice;
             aFood.rating = ratingValue;
 
-            startActivity(new Intent(this,Food.class));
+            startActivity(new Intent(this,Home.class));
 
         } else
             Toast.makeText(this, "You must Enter Something for Name and Shop",Toast.LENGTH_SHORT).show();

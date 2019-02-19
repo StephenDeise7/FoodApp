@@ -1,6 +1,5 @@
 package ie.wit.foodapp.Menus;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,16 +19,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import ie.wit.foodapp.R;
 import ie.wit.foodapp.activities.Add;
 import ie.wit.foodapp.activities.Favourites;
+import ie.wit.foodapp.activities.Foods;
 import ie.wit.foodapp.activities.Search;
 
+public class MainActivity extends AppCompatActivity  {
 
-public class Main_Menu extends AppCompatActivity  {
+    int[] images = {R.drawable.food, R.drawable.add_72,R.drawable.search_72,R.drawable.favourites_72};
 
-    int[] images = {R.drawable.add_72, R.drawable.favourites_72,R.drawable.search_72};
+    String[] version = { "Foods", "Adds","Search","Favourite"};
 
-    String[] version = { "Add Food", "Favourites","Search"};
-
-    String[] versionNumber = {"","",""};
+    String[] versionNumber = {"", "","","",""};
 
     ListView lView;
 
@@ -41,6 +40,8 @@ public class Main_Menu extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
 
 
@@ -48,7 +49,7 @@ public class Main_Menu extends AppCompatActivity  {
 
         lView = (ListView) findViewById(R.id.androidList);
 
-        lAdapter = new ListAdapter(Main_Menu.this, version, versionNumber, images);
+        lAdapter = new ListAdapter(MainActivity.this, version, versionNumber, images);
 
         lView.setAdapter(lAdapter);
 
@@ -56,16 +57,16 @@ public class Main_Menu extends AppCompatActivity  {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Toast.makeText(Main_Menu.this, version[i]+" "+versionNumber[i], Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, version[i]+" "+versionNumber[i], Toast.LENGTH_SHORT).show();
 
                 if (i==0)
                 {
-                    Intent intent = new Intent (view.getContext(), Add.class);
+                    Intent intent = new Intent (view.getContext(), Foods.class);
                     startActivity(intent);
                 }
                 else if (i==1)
                 {
-                    Intent intent = new Intent (view.getContext(), Favourites.class);
+                    Intent intent = new Intent (view.getContext(), Add.class);
                     startActivity(intent);
                 }
                 else if (i==2)
@@ -73,8 +74,11 @@ public class Main_Menu extends AppCompatActivity  {
                     Intent intent = new Intent (view.getContext(), Search.class);
                     startActivity(intent);
                 }
-
-
+                else if (i==3)
+                {
+                    Intent intent = new Intent (view.getContext(), Favourites.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -82,4 +86,3 @@ public class Main_Menu extends AppCompatActivity  {
 
 
 }
-

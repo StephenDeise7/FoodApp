@@ -29,7 +29,7 @@ public class HomeMenu extends AppCompatActivity
             //that means user is already logged in
             //so close this activity
             finish();
-            startActivity(new Intent(HomeMenu.this, Home.class));
+            startActivity(new Intent(HomeMenu.this, MainActivity.class));
 
             //and open main activity
 

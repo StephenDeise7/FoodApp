@@ -8,6 +8,7 @@ import java.util.List;
 
 import ie.wit.foodapp.models.Food;
 
+
 public class FoodApp extends Application
 {
     public List<Food> foodList = new ArrayList<>();
@@ -16,6 +17,6 @@ public class FoodApp extends Application
     public void onCreate()
     {
         super.onCreate();
-        Log.v("foodapp", "food App Started");
+        Log.v("foodapp", "CoffeeMate App Started");
     }
 }

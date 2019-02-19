@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class Food implements Serializable
 {
-	public String foodId;
+	public String FoodId;
 	public String foodName;
 	public String shop;
 	public double rating;
@@ -17,7 +17,7 @@ public class Food implements Serializable
 
 	public Food(String name, String shop, double rating, double price, boolean fav)
 	{
-		this.foodId = UUID.randomUUID().toString();
+		this.FoodId = UUID.randomUUID().toString();
 		this.foodName = name;
 		this.shop = shop;
 		this.rating = rating;
@@ -27,7 +27,7 @@ public class Food implements Serializable
 
 	@Override
 	public String toString() {
-		return foodId + " " + foodName + ", " + shop + ", " + rating
+		return FoodId + " " + foodName + ", " + shop + ", " + rating
 				+ ", " + price + ", fav =" + favourite;
 	}
 }

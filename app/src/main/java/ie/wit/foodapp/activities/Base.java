@@ -8,29 +8,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 import com.google.firebase.auth.FirebaseAuth;
 
 import ie.wit.foodapp.Menus.HomeMenu;
-import ie.wit.foodapp.Menus.Main_Menu;
-import ie.wit.foodapp.Menus.ProfileActivity;
+import ie.wit.foodapp.Menus.MainActivity;
+import ie.wit.foodapp.R;
 import ie.wit.foodapp.fragments.FoodFragment;
 import ie.wit.foodapp.main.FoodApp;
-import ie.wit.foodapp.R;
 
 public class Base extends AppCompatActivity {
 
     public FoodApp app;
     public Bundle activityInfo; // Used for persistence (of sorts)
-    public FoodFragment foodFragment;
+    public FoodFragment foodFragment; // How we'll 'share' our List of Coffees between Activities
+    private FirebaseAuth firebaseAuth;
 
-    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         app = (FoodApp) getApplication();
-
         firebaseAuth = FirebaseAuth.getInstance();
+
     }
 
     @Override
@@ -40,7 +40,17 @@ public class Base extends AppCompatActivity {
     }
 
     public void menuHome(MenuItem m) {
-        startActivity(new Intent(this, Main_Menu.class));
+        startActivity(new Intent(this, MainActivity.class));
+    }
+
+    public void menuProfile(MenuItem m) {
+        startActivity(new Intent(this, HomeMenu.class));
+    }
+
+    public void menuLogout(MenuItem m) {
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(this, HomeMenu.class));
     }
 
     public void menuInfo(MenuItem m) {
@@ -60,16 +70,5 @@ public class Base extends AppCompatActivity {
 
     public void menuHelp(MenuItem m) {
         startActivity(new Intent(this, Help.class));
-    }
-
-    public void menuProfile(MenuItem m) {
-        startActivity(new Intent(this, ProfileActivity.class));
-    }
-
-    public void menuLogout(MenuItem m) {
-        firebaseAuth.signOut();
-        finish();
-        startActivity(new Intent(this, HomeMenu.class));
-
     }
 }
