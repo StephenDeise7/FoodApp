@@ -13,7 +13,7 @@
     <string name="addAFoodLbl">Food Check In</string>
     <string name="addFoodBtnLbl">Add Food</string>
     <string name="saveFoodBtn">Save Food</string>
-    <string name="recentlyViewedLbl">Recently Added Food\'s</string>
+    <string name="recentlyViewedLbl">Foods</string>
     <string name="FoodNameLbl">Name :</string>
     <string name="RestuarantLbl">Restuarant :</string>
     <string name="FoodPriceLbl">Price :</string>

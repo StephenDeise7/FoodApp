@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import com.google.firebase.auth.FirebaseAuth;
 
 import ie.wit.foodapp.Menus.HomeMenu;
+import ie.wit.foodapp.Menus.Main_Menu;
 import ie.wit.foodapp.Menus.ProfileActivity;
 import ie.wit.foodapp.fragments.FoodFragment;
 import ie.wit.foodapp.main.FoodApp;
@@ -39,7 +40,7 @@ public class Base extends AppCompatActivity {
     }
 
     public void menuHome(MenuItem m) {
-        startActivity(new Intent(this, Home.class));
+        startActivity(new Intent(this, Main_Menu.class));
     }
 
     public void menuInfo(MenuItem m) {

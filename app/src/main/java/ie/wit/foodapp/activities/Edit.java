@@ -26,7 +26,7 @@ public class Edit extends Base {
         setContentView(R.layout.edit);
         context = this;
         activityInfo = getIntent().getExtras();
-        aFood = getCoffeeObject(activityInfo.getString("coffeeId"));
+        aFood = getFoodObject(activityInfo.getString("foodId"));
 
         ((TextView)findViewById(R.id.editTitleTV)).setText(aFood.foodName);
 
@@ -46,7 +46,7 @@ public class Edit extends Base {
         }
     }
 
-    private Food getCoffeeObject(String id) {
+    private Food getFoodObject(String id) {
 
         for (Food c : app.foodList)
             if (c.foodId.equalsIgnoreCase(id))
@@ -84,7 +84,7 @@ public class Edit extends Base {
             aFood.price = foodPrice;
             aFood.rating = ratingValue;
 
-            startActivity(new Intent(this,Home.class));
+            startActivity(new Intent(this,Food.class));
 
         } else
             Toast.makeText(this, "You must Enter Something for Name and Shop",Toast.LENGTH_SHORT).show();

@@ -1,4 +1,4 @@
-package ie.wit.foodapp.activities;
+package ie.wit.foodapp.Menus;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

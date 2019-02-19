@@ -29,6 +29,7 @@
             <activity android:name=".activities.Edit" />
             <activity android:name=".activities.Favourites" />
             <activity android:name=".activities.Search"></activity>
+            <activity android:name=".Menus.Main_Menu"></activity>
             <activity android:name=".Menus.HomeMenu"></activity>
             <activity android:name=".Menus.LoginActivity"></activity>
             <activity android:name=".Menus.MainLoginActivity"></activity>
