@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+import ie.wit.foodapp.Menus.MainActivity;
 import ie.wit.foodapp.R;
 import ie.wit.foodapp.models.Food;
 
@@ -47,7 +48,7 @@ public class Add extends Base {
                     foodPrice, false);
 
             app.foodList.add(c);
-            startActivity(new Intent(this, Home.class));
+            startActivity(new Intent(this, MainActivity.class));
         } else
             Toast.makeText(
                     this,

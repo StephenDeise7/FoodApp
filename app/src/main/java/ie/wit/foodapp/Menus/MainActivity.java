@@ -18,15 +18,16 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import ie.wit.foodapp.R;
 import ie.wit.foodapp.activities.Add;
+import ie.wit.foodapp.activities.Base;
 import ie.wit.foodapp.activities.Favourites;
 import ie.wit.foodapp.activities.Foods;
 import ie.wit.foodapp.activities.Search;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends Base {
 
     int[] images = {R.drawable.food, R.drawable.add_72,R.drawable.search_72,R.drawable.favourites_72};
 
-    String[] version = { "Foods", "Adds","Search","Favourite"};
+    String[] version = { "Foods", "Add","Search","Favourites"};
 
     String[] versionNumber = {"", "","","",""};
 

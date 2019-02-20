@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import ie.wit.foodapp.Menus.HomeMenu;
 import ie.wit.foodapp.Menus.MainActivity;
+import ie.wit.foodapp.Menus.ProfileActivity;
 import ie.wit.foodapp.R;
 import ie.wit.foodapp.fragments.FoodFragment;
 import ie.wit.foodapp.main.FoodApp;
@@ -44,7 +45,7 @@ public class Base extends AppCompatActivity {
     }
 
     public void menuProfile(MenuItem m) {
-        startActivity(new Intent(this, HomeMenu.class));
+        startActivity(new Intent(this, ProfileActivity.class));
     }
 
     public void menuLogout(MenuItem m) {

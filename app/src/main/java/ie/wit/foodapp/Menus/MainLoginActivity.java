@@ -49,7 +49,7 @@ public class MainLoginActivity extends AppCompatActivity implements View.OnClick
             finish();
 
             //and open profile activity
-            startActivity(new Intent(getApplicationContext(), Home.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
 
         //initializing views

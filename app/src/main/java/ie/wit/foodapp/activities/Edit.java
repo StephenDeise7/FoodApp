@@ -10,6 +10,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ie.wit.foodapp.Menus.MainActivity;
 import ie.wit.foodapp.R;
 import ie.wit.foodapp.models.Food;
 
@@ -84,7 +85,7 @@ public class Edit extends Base {
             aFood.price = foodPrice;
             aFood.rating = ratingValue;
 
-            startActivity(new Intent(this,Home.class));
+            startActivity(new Intent(this,MainActivity.class));
 
         } else
             Toast.makeText(this, "You must Enter Something for Name and Shop",Toast.LENGTH_SHORT).show();
