@@ -1,33 +1,49 @@
 package ie.wit.foodapp.models;
 
-import java.io.Serializable;
-import java.util.UUID;
+public class Food {
+    private String userid;
+    private String name;
+    private String shop;
+    private String price;
 
-public class Food implements Serializable
-{
-	public String FoodId;
-	public String foodName;
-	public String shop;
-	public double rating;
-	public double price;
-	public boolean favourite;
+    public Food() {
+
+    }
+
+    public Food(String userid, String name, String shop, String price)
+    {
+        this.userid = userid;
+        this.name = name;
+        this.shop = shop;
+        this.price = price;
+    }
+    public String getUserid() {
+        return userid;
+    }
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getUsername() {
+        return name;
+    }
+    public void setUsername(String username) {
+        this.name = username;
+    }
+
+    public String getShop() {
+        return shop;
+    }
+    public void setShop(String shop) {
+        this.shop = shop;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
 
-	public Food() {}
-
-	public Food(String name, String shop, double rating, double price, boolean fav)
-	{
-		this.FoodId = UUID.randomUUID().toString();
-		this.foodName = name;
-		this.shop = shop;
-		this.rating = rating;
-		this.price = price;
-		this.favourite = fav;
-	}
-
-	@Override
-	public String toString() {
-		return FoodId + " " + foodName + ", " + shop + ", " + rating
-				+ ", " + price + ", fav =" + favourite;
-	}
 }

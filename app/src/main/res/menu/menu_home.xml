@@ -3,25 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="ie.wit.foodapp.Menus.MainActivity">
 
-    <item android:id="@+id/menu_help"
-        android:title="Help"
-        android:orderInCategory="100"
-        android:onClick="menuHelp"
-        app:showAsAction="never" />
-
-    <item android:id="@+id/menu_info"
-        android:title="Info"
-        android:orderInCategory="100"
-        android:onClick="menuInfo"
-        app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_home"
         android:icon="@drawable/home"
         android:onClick="menuHome"
-        android:orderInCategory="100"
+        android:orderInCategory="1"
         android:title="Home"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_camera"
+        android:icon="@drawable/camera_lg"
+        android:onClick="menuCamera"
+        android:orderInCategory="2"
+        android:title="Camera"
+        app:showAsAction="ifRoom" />
+
+
     <item
         android:id="@+id/menuProfile"
         android:orderInCategory="100"
